@@ -11,17 +11,54 @@
 </head>
 
 <body>
-  <h1>Proyecto 2023S1</h1>
-  <h2>Nuevo país</h2>
-  <label for="inp_nombre">Nombre
-    <input type="text" id="inp_name" name="name">
-  </label>
-  <label for="inp_capital">Capital
-    <input type="text" id="inp_capital" name="capital">
-  </label>
-  <button id="btn_add">Agregar</button>
-  <div id="seccountries">
-    <h2>Lista de países</h2>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand ps-2" href="#">Proyecto 2023S1</a>
+    <div class="nav nav-pills" id="nav-tab" role="tablist">
+      <button class="nav-link active me-3" id="nav-add-country-tab" data-bs-toggle="tab" data-bs-target="#nav-add-country" type="button" role="tab" aria-controls="nav-add-country" aria-selected="true">Agregar país</button>
+      <button class="nav-link" id="nav-countries-list-tab" data-bs-toggle="tab" data-bs-target="#nav-countries-list" type="button" role="tab" aria-controls="nav-countries-list" aria-selected="false">Lista países</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-add-country" role="tabpanel" aria-labelledby="nav-add-country-tab">
+      <div class="container shadow bg-white rounded">
+        <div class="row">
+          <div class="col-sm p-0 fill">
+            <img src="./img/countries-flags.jpg" alt="Flags Image" id="add-countries-image" class="rounded-start">
+          </div>
+          <div class="col-sm pt-2 px-4">
+            <h1 class="title">Registro de países</h1>
+            <form id="register-form">
+              <div class="row">
+                <div class="col-sm">
+                  <label for="name" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="inp-name" name="name" placeholder="Ingrese el nombre" required>
+                </div>
+              </div>
+              <div clas="row">
+                <div class="col-sm">
+                  <label for="lastname" class="form-label">Captital:</label>
+                  <input type="text" class="form-control" id="inp-capital" name="capital" placeholder="Ingrese la capital" required>
+                </div>
+              </div>
+              <div class="d-none" id="add-countries-error">
+                <p class="text-danger pt-2" id="add-countries-error-msg">El país ya existe</p>
+              </div>
+              <div class="row-sm py-3 text-end">
+                <button id="btn-add" type="button" class="btn btn-primary">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-countries-list" role="tabpanel" aria-labelledby="nav-countries-list-tab">
+      <h2 class="position-absolute top-50 start-50 translate-middle" id="empty-list">No ha ingresado ningún país :(</h2>
+      <div id="countries" class="container shadow bg-white rounded mt-4 p-2 d-none">
+        <h1 class="title ps-2">Countries: </h1>
+        <ul id="countries-list" class="list-group-numbered">
+        </ul>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

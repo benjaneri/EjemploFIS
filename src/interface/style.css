@@ -1,0 +1,15 @@
+.navbar {
+    margin-bottom: 40px;
+    background-color: rgb(199, 199, 199);
+}
+
+#add-countries-image {
+    width: 100%;
+    height: 100%;
+}
+
+.error-container {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
