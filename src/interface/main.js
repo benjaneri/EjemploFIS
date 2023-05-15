@@ -35,12 +35,9 @@ function cleanInputs() {
 function loadCountryList(newCountry) {
   const countriesList = document.getElementById("countries-list");
   const countriesContainer = document.getElementById("countries");
+  const emptyList = document.getElementById("empty-list");
   
-  try {
-    document.getElementById("empty-list").remove();
-  } catch (error) {
-    console.log(error);
-  }
+  emptyList.classList.add('d-none');
   countriesContainer.classList.remove("d-none");
   let li = document.createElement("li");
   li.classList.add("list-group-item");
