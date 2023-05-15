@@ -44,3 +44,10 @@ function loadCountryList(newCountry) {
   li.innerText = newCountry.presentar();
   countriesList.appendChild(li);
 }
+
+inpCapital.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    btnAdd.click();
+  }
+});
