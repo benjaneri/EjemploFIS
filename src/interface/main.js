@@ -16,7 +16,7 @@ btnAdd.addEventListener('click', () => {
   try
   {
     mainCountryList.add(newCountry);
-    cleanInputs();
+    clearInputs();
     countriesErrorContainer.classList.add("d-none");
     loadCountryList(newCountry);
   }
@@ -27,7 +27,7 @@ btnAdd.addEventListener('click', () => {
   }
 });
 
-function cleanInputs() {
+function clearInputs() {
   inpName.value = "";
   inpCapital.value = "";
 }

@@ -12,7 +12,7 @@ export class Country {
   }
 
   setCapital(aCapital) {
-    this.#capital = aCapital
+    this.#capital = aCapital;
   }
 
   presentar() {
