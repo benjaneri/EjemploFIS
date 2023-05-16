@@ -41,7 +41,7 @@ function loadCountryList(newCountry) {
   countriesContainer.classList.remove("d-none");
   let li = document.createElement("li");
   li.classList.add("list-group-item");
-  li.innerText = newCountry.presentar();
+  li.innerText = newCountry.toString();
   countriesList.appendChild(li);
 }
 

@@ -15,7 +15,7 @@ export class Country {
     this.#capital = aCapital;
   }
 
-  presentar() {
+  toString() {
     return `País: ${this.#nombre} - capital: ${this.#capital}`;
   }
 
