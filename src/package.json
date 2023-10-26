@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --open='/interface'",
+    "start": "live-server --open=/interface",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "keywords": [],
