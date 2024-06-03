@@ -16,12 +16,19 @@
   <nav class="navbar navbar-expand">
     <a class="navbar-brand ps-2" href="#">Proyecto 2023S1</a>
     <div class="nav nav-pills" id="nav-tab" role="tablist">
-      <button class="nav-link active me-3" id="nav-add-country-tab" data-bs-toggle="tab" data-bs-target="#nav-add-country" type="button" role="tab" aria-controls="nav-add-country" aria-selected="true">Agregar país</button>
-      <button class="nav-link" id="nav-countries-list-tab" data-bs-toggle="tab" data-bs-target="#nav-countries-list" type="button" role="tab" aria-controls="nav-countries-list" aria-selected="false">Lista países</button>
+      <button class="nav-link active me-3" id="nav-add-country-tab" data-bs-toggle="tab"
+        data-bs-target="#nav-add-country" type="button" role="tab" aria-controls="nav-add-country"
+        aria-selected="true">Agregar país</button>
+      <button class="nav-link" id="nav-countries-list-tab" data-bs-toggle="tab" data-bs-target="#nav-countries-list"
+        type="button" role="tab" aria-controls="nav-countries-list" aria-selected="false">Lista países</button>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-add-country" role="tabpanel" aria-labelledby="nav-add-country-tab">
+      <div class="row justify-content-end px-5" style="width: 100%;">
+        <div class="col-8 col-lg-4 col-xs-8" id="alerts">
+        </div>
+      </div>
       <div class="container shadow bg-white rounded">
         <div class="row">
           <div class="col-sm p-0 fill">
@@ -33,13 +40,15 @@
               <div class="row">
                 <div class="col-sm">
                   <label for="inp-name" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="inp-name" name="name" placeholder="Ingrese el nombre" required>
+                  <input type="text" class="form-control" id="inp-name" name="name" placeholder="Ingrese el nombre"
+                    required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm pt-3">
                   <label for="inp-capital" class="form-label">Capital:</label>
-                  <input type="text" class="form-control" id="inp-capital" name="capital" placeholder="Ingrese la capital" required>
+                  <input type="text" class="form-control" id="inp-capital" name="capital"
+                    placeholder="Ingrese la capital" required>
                 </div>
               </div>
               <div class="d-none" id="add-countries-error">
