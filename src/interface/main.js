@@ -19,6 +19,7 @@ btnAdd.addEventListener('click', () => {
     clearInputs();
     countriesErrorContainer.classList.add("d-none");
     loadCountryList(newCountry);
+    appendAlert(`${newCountry.getNombre()} agregado correctamente!`, 'success')
   }
   catch (error)
   {
@@ -51,3 +52,16 @@ inpCapital.addEventListener("keypress", function(event) {
     btnAdd.click();
   }
 });
+
+const alertPlaceholder = document.getElementById('alerts')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible pe-4" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
